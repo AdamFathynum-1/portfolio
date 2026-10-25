@@ -1,0 +1,222 @@
+
+header {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.85));
+    backdrop-filter: blur(10px);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    text-decoration: none;
+    background: linear-gradient(135deg, #3a6cf4, #601cfc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a {
+    color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #601cfc;
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: 
+        linear-gradient(135deg in oklab, rgba(15, 23, 42, 0.88), rgba(58, 108, 244, 0.65)),
+        radial-gradient(at 80% 20%, rgba(96, 28, 252, 0.5) 0px, transparent 50%),
+        url('images/background.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h2 {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    /* Gradient text effect on main headline */
+    background: linear-gradient(90deg, #4e9eff, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.main h3 {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    color: #fff;
+    background: linear-gradient(135deg, #3a6cf4 0%, #601cfc 100%);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(58, 108, 244, 0.35);
+    transition: 0.4s ease;
+}
+
+.main-btn:hover {
+    background: linear-gradient(135deg, #0a49f6 0%, #4c00ff 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(58, 108, 244, 0.5);
+}
+
+.social-icons a {
+    color: #4e9eff;
+    font-size: 1.7em;
+    padding-right: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #3a6cf4, #601cfc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    width: 20em;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    border: 1px solid rgba(220, 225, 235, 0.5);
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3a6cf4, #601cfc);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(58, 108, 244, 0.2);
+}
+
+.card .icon {
+    background: conic-gradient(from 180deg at 50% 50%, #3a6cf4, #601cfc, #4e9eff, #3a6cf4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 6em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+
+@media (max-width: 1023px) {
+    header {
+        padding: 12px 20px;
+    }
+    .navigation a {
+        padding-left: 10px;
+    }
+    .title {
+        font-size: 1.8em;
+    }
+    section {
+        padding: 80px 20px;
+    }
+    .main h2 {
+        font-size: 1em;
+    }
+    .main h3 {
+        font-size: 1.6em;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 641px) {
+    body {
+        font-size: 12px;
+    }
+    .main h2 {
+        font-size: 0.8em;
+    }
+    .main h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 300px) {
+    body {
+        font-size: 10px;    
+    }
+}
